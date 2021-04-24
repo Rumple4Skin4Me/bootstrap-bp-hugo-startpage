@@ -1,53 +1,60 @@
-ignoreFiles = ["content/portfolio/\\.*","content/product/\\.*","content/sketch/\\.*","content/homepage/\\.*","content/post/\\.*","content/\\.*"] # disable example pages as this is a single page
 baseURL = "https://example.com/"
-languageCode = "en-US"
-title = "Bootstrap-BP hugo startpage"
-theme = "bootstrap-bp-hugo-startpage"
-# googleAnalytics = "UA-123-45"
+canonifyurls = true
 copyright = "Sebastian Pech"
 enableRobotsTXT = true
-pygmentsCodeFences = true
-canonifyurls = true
+ignoreFiles = ["content/portfolio/\\.*", "content/product/\\.*", "content/sketch/\\.*", "content/homepage/\\.*", "content/post/\\.*", "content/\\.*"]
+languageCode = "en-US"
 paginate = 5
-
-[sitemap]
-    changefreq = "weekly"
-    priority = 0.5
-
-[permalinks]
-    posts = "/:year/:month/:slug/"
-    post = "/:year/:month/:slug/"
-    pages = "/:slug/"
-    page = "/:slug/"
-
-[Author]  
-  name = "Sebastian Pech"
-
+pygmentsCodeFences = true
+theme = "bootstrap-bp-hugo-startpage"
+title = "Bootstrap-BP hugo startpage"
+[Author]
+name = "Sebastian Pech"
+[[menu.main]]
+name = "Midvale"
+parent = "tutorials"
+url = "https://darksky.net/forecast/40.6139,-111.8878/us12/en"
+weight = 4
+[[menu.main]]
+name = "Dexter"
+url = "https://darksky.net/forecast/44.0057,-76.0439/us12/en"
+weight = 3
+[[menu.main]]
+name = "Original Songs - JW"
+url = "https://www.jw.org/en/library/music-songs/original-songs/safeguard-your-mind/"
+weight = 2
+[[menu.main]]
+name = "What's New? - JW"
+parent = "tutorials"
+url = "https://www.jw.org/en/whats-new/"
+weight = 1
 [params]
-  description = "Text about the site"
-  #images = ["logo.jpg"]
-  startPageColumns = true
-  welcomeText = "Bootstrap-BP hugo startpage"
-
+description = "Text about the site"
+startPageColumns = true
+welcomeText = "Bootstrap-BP hugo startpage"
 [[params.searchEngines]]
-  name = "Google"
-  activated = true
-  url = "https://www.google.com/search"
-
+activated = true
+name = "Google"
+url = "https://www.google.com/search"
 [[params.searchEngines]]
-  name = "DuckDuckGo"
-  activated = true
-  url = "https://duckduckgo.com/"
-
+activated = true
+name = "DuckDuckGo"
+url = "https://duckduckgo.com/"
 [[params.searchEngines]]
-  name = "Bing"
-  activated = true
-  url = "https://www.bing.com/search"
-
+activated = true
+name = "Bing"
+url = "https://www.bing.com/search"
 [[params.searchEngines]]
-  name = "Baidu"
-  activated = true
-  url = "https://baidu.com/s"
-  searchkey = "wd"
-
+activated = true
+name = "Baidu"
+searchkey = "wd"
+url = "https://baidu.com/s"
+[permalinks]
+page = "/:slug/"
+pages = "/:slug/"
+post = "/:year/:month/:slug/"
+posts = "/:year/:month/:slug/"
+[sitemap]
+changefreq = "weekly"
+priority = 0.5
 [taxonomies]
